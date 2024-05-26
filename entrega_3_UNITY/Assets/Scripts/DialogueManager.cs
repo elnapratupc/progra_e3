@@ -1,9 +1,24 @@
 using UnityEngine;
+using TMPro; 
 
 public class DialogueManager : MonoBehaviour
 {
-    public void StartDialogue()
+    public GameObject dialoguePanel;
+    public TextMeshProUGUI dialogueText;
+
+    private void Start()
     {
-        Debug.Log("Diálogo iniciado"); // Esto es solo un ejemplo, puedes cambiarlo según tu sistema de diálogo real
+        dialoguePanel.SetActive(false); 
+    }
+
+    public void StartDialogue(string message)
+    {
+        dialoguePanel.SetActive(true);
+        dialogueText.text = message;
+    }
+
+    public void EndDialogue()
+    {
+        dialoguePanel.SetActive(false);
     }
 }

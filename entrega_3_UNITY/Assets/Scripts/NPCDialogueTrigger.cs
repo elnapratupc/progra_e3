@@ -8,8 +8,8 @@ public class NPCDialogueTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            dialogueManager.StartDialogue();
+            Debug.Log("Colisión con el jugador detectada"); 
+            dialogueManager.StartDialogue("HOLA, SOY UN NPC ENCANTADO");
         }
     }
 }
-
